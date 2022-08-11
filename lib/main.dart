@@ -91,7 +91,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
     setState(() {
       
-      output = double.parse(_output).toStringAsFixed(2);
+       if (_output.contains('.')) {
+        output = double.parse(_output).toString();
+      } else {
+        output = int.parse(_output).toString();
+      }
 
     });
 
