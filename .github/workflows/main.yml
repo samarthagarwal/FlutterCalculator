@@ -26,7 +26,7 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
-    - uses: actions/setip-andriod@33
+    - uses: actions/setup-andriod@33
       with:
         android-version: '21+x'
     - uses: subosito/flutter-action@v3
