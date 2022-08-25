@@ -30,10 +30,10 @@ jobs:
     - uses: subosito/flutter-action@v1
       with:
         flutter-version: '1.7.8+hotfix.4'
-    - run: flutter build apk
-    - run: flutter test
-    - run: flutter build apk --debug --split-per-abi
-    - name: Create a Release APK
+    - run: flutter --version
+    #- run: flutter test
+    #- run: flutter build apk --debug --split-per-abi
+    #- name: Create a Release APK
       uses: ncipollo/release-action@v1
       with:
         artifacts: "build/app/outputs/apk/debug/*.apk"
