@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -96,23 +96,24 @@ class _MyHomePageState extends State<MyHomePage> {
     });
 
   }
-  
+
   Widget buildButton(String buttonText) {
-    return new Expanded(
-      child: new OutlineButton(
-        padding: new EdgeInsets.all(24.0),
-        child: new Text(buttonText,
-          style: TextStyle(
+    return Expanded(
+      child: OutlinedButton(
+        style: OutlinedButton.styleFrom(
+          padding: EdgeInsets.all(24.0),
+          side: BorderSide(color: Colors.blue), // Add border color here if needed
+          textStyle: TextStyle(
             fontSize: 20.0,
-            fontWeight: FontWeight.bold
+            fontWeight: FontWeight.bold,
           ),
-          ),
-        onPressed: () => 
-          buttonPressed(buttonText)
-        ,
+        ),
+        onPressed: () => buttonPressed(buttonText),
+        child: Text(buttonText),
       ),
     );
   }
+
 
   @override
   Widget build(BuildContext context) {

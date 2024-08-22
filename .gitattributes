@@ -1,0 +1,6 @@
+*.c linguist-language=dart
+*.cc linguist-language=dart
+*.cpp linguist-language=dart
+*.h linguist-language=dart
+*.yaml linguist-language=dart
+*.dart linguist-language=dart
